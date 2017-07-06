@@ -14,7 +14,7 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 80F70E11F0F0D5F
  && rm -rf /var/lib/apt/lists/*
 
 COPY squid.conf /etc/squid3/squid.conf
-COPY squid.perm /etc/squid3/squid.perm
+COPY squid.pem /etc/squid3/squid.pem
 COPY entrypoint.sh /sbin/entrypoint.sh
 RUN chmod 755 /sbin/entrypoint.sh
 
